@@ -22,6 +22,7 @@
     <div class="sec_head">お知らせ</div>
     <div class="news_list">
         <ul>
+<<<<<<< HEAD
             <li>
                 <a href="">
                     <div class="date">2020.12.28</div>
@@ -54,6 +55,19 @@
             </li>
         <ul>
         <div class="btn_stn"><a href="">一覧をみる</a></div>
+=======
+           <?php if (have_posts()): ?>
+           <?php while (have_posts()): the_post();?><!-- ループ開始 -->
+           <li>
+                <a href="<?php_the_permalink() ;?>">
+                    <div class="date"><?php echo get_the_date('Y.m.d');?></div>
+                    <div class="ttl"><?php the_title();?></div>
+                </a>    
+            </li>  
+           <?php endwhile; endif; ?><!-- /ループ終わり -->
+
+        <div class="btn_stn"><a href="<?php bloginfo('url');?>/news">一覧をみる</a></div>
+>>>>>>> e3664b2 (test)
     </div>
     </section>
 </div>
