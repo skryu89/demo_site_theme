@@ -28,9 +28,31 @@
            </ul>
     </nav>
 </div>
-<div class="header_img">
+<?php if(is_front_page()){ ?>
+<div class="header_img"><!-- TOPページ用 -->
     <img src="<?php bloginfo('template_url'); ?>./img/header_img.jpg" srcset="./img/header_img@2x.jpg 2x" alt="">
 </div>
+<?php }else if(is_page('service')){ ?>
+<div class="header_img"><!-- サービス用 -->
+    <img src="<?php bloginfo('template_url'); ?>./img/header_service.jpg" srcset="./img/header_service@2x.jpg 2x" alt="">
+</div>
+<?php }else if(is_page('price')){ ?>
+<div class="header_img"><!-- 料金案内用 -->
+    <img src="<?php bloginfo('template_url'); ?>./img/header_price.jpg" srcset="./img/header_price@2x.jpg 2x" alt="">
+</div>
+<?php }else if(is_page('company')){ ?>
+<div class="header_img"><!-- 会社概要用 -->
+    <img src="<?php bloginfo('template_url'); ?>./img/header_company.jpg" srcset="./img/header_company@2x.jpg 2x" alt="">
+</div>
+<?php }else if(is_page('contact')){ ?>
+<div class="header_img"><!-- お問い合わせ -->
+    <img src="<?php bloginfo('template_url'); ?>./img/header_contact.jpg" srcset="./img/header_contact@2x.jpg 2x" alt="">
+</div>
+<?php }else if(is_archive()){ ?>
+<div class="header_img"><!-- ニュース -->
+    <img src="<?php bloginfo('template_url'); ?>./img/header_news.jpg" srcset="./img/header_news@2x.jpg 2x" alt="">
+</div>
+<?php }else{} ?>
 </header><!-- ここまでヘッダー -->
 
 <div id="wrap">

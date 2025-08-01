@@ -4,3 +4,16 @@ Author: skryu89
 Description: demo_site_theme
 Version: 1.0
 */
+/*
+**********************************固定ページ基本
+*/
+.page_wrap{
+    display:flex;
+}
+.page_wrap #main{
+    width:880px;
+}
+.page_wrap #side{
+    width:280px;
+    margin-left:
+}
